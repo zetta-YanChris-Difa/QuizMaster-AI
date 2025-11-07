@@ -14,7 +14,7 @@
     </section>
 
     <section class="dashboard__toolbar">
-      <input type="text" [placeholder]="'messages.loading' | transloco" />
+      <input type="text" [placeholder]="'dashboard.searchProjects' | transloco" />
       <button mat-button matSuffix class="hero-button">
         <mat-icon svgIcon="search"></mat-icon>
       </button>
@@ -29,8 +29,8 @@
         @for (p of projects; track p.id) {
           <div class="dashboard__card gradient-card" (click)="navigateToQuizDetails(p?.id)">
             <h3>{{ p.title }}</h3>
-            <p class="dashboard__muted">{{ p.questionCount }} questions</p>
-            <span class="dashboard__status" [attr.data-status]="p.status">{{ p.status }}</span>
+            <p class="dashboard__muted">{{ p.questionCount }} {{ 'questions' | transloco }}</p>
+            <span class="dashboard__status" [attr.data-status]="p.status">{{ 'dashboard.quizStatus.' + p.status | transloco}}</span>
           </div>
         }
       }

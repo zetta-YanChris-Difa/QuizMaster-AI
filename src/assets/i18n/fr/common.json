@@ -18,5 +18,6 @@
     "success": "Succès !",
     "error": "Une erreur s'est produite",
     "noData": "Aucune donnée disponible"
-  }
+  },
+  "questions": "questions"
 }

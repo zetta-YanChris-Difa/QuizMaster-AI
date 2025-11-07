@@ -10,5 +10,11 @@
   },
   "createNew": "Créer un Nouveau Projet",
   "noProjects": "Vous n'avez pas encore de projets",
-  "getStarted": "Commencez par créer votre premier projet de quiz"
+  "getStarted": "Commencez par créer votre premier projet de quiz",
+  "searchProjects": "Rechercher des projets...",
+  "quizStatus": {
+    "ready": "prêt",
+    "processing": "en cours de traitement",
+    "draft": "brouillon"
+  }
 }

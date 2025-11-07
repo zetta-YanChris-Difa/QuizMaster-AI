@@ -15,7 +15,7 @@
 .dashboard__card h3 { @apply m-0 mb-1 text-lg; }
 .dashboard__card span { @apply inline-block mt-4 pb-2 }
 .dashboard__muted { @apply text-muted text-sm; }
-.dashboard__status { @apply inline-block mt-2 text-xs px-2 py-0.5 rounded-md border border-border; }
+.dashboard__status { @apply inline-block mt-2 text-xs px-2 pt-1 rounded-md border border-border; }
 .dashboard__status[data-status="ready"] { @apply bg-success/15 text-text border-border; }
 .dashboard__status[data-status="processing"] { @apply bg-primary/15 text-text border-border; }
 .dashboard__status[data-status="draft"] { @apply bg-yellow-500/15 text-text border-border; }

@@ -10,5 +10,11 @@
   },
   "createNew": "Create New Project",
   "noProjects": "You don't have any projects yet",
-  "getStarted": "Get started by creating your first quiz project"
+  "getStarted": "Get started by creating your first quiz project",
+  "searchProjects": "Search projects...",
+  "quizStatus": {
+    "ready": "Ready",
+    "processing": "Processing",
+    "draft": "Draft"
+  }
 }
