@@ -7,11 +7,14 @@
         <h1>Your Quiz Projects</h1>
         <p>Create, manage, and export AI-powered quizzes</p>
       </div>
-      <a routerLink="/new" class="btn btn-accent">Create New Quiz</a>
+      <button mat-button class="hero-button" (click)="navigateToNewQuiz()"><mat-icon class="!h-4" svgIcon="sparkles"></mat-icon>Create New Quiz</button>
     </section>
 
     <section class="dashboard__toolbar">
       <input type="text" placeholder="Search projects..." />
+      <button mat-button matSuffix class="hero-button">
+        <mat-icon svgIcon="search"></mat-icon>
+      </button>
       <!-- <div class="dashboard__view-toggle">
         <button (click)="viewMode='grid'" [class.active]="viewMode==='grid'">Grid</button>
         <button (click)="viewMode='list'" [class.active]="viewMode==='list'">List</button>
@@ -21,11 +24,11 @@
     <section class="dashboard__projects" [class.list]="viewMode === 'list'">
       @if (projects.length) {
         @for (p of projects; track p.id) {
-          <a class="dashboard__card" [routerLink]="['/project', p.id]">
+          <div class="dashboard__card gradient-card" (click)="navigateToQuizDetails(p?.id)">
             <h3>{{ p.title }}</h3>
-            <p class="dashboard__muted">{{ p.subject }} • {{ p.questionCount }} questions</p>
+            <p class="dashboard__muted">{{ p.questionCount }} questions</p>
             <span class="dashboard__status" [attr.data-status]="p.status">{{ p.status }}</span>
-          </a>
+          </div>
         }
       }
     </section>

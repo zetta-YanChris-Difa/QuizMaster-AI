@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { IndexComponent } from './pages/index/index.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NewProjectComponent } from './pages/new-project/new-project.component';
 import { ProjectWorkspaceComponent } from './pages/project-workspace/project-workspace.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
@@ -8,7 +7,10 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 export const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'index', component: IndexComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./features/dashboard/dashboard.module').then(m => m.DashboardModule),
+  },
   { path: 'new', component: NewProjectComponent },
   { path: 'project/:id', component: ProjectWorkspaceComponent },
   { path: '**', component: NotFoundComponent },

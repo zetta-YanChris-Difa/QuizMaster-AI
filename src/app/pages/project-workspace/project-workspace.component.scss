@@ -1,7 +1,5 @@
 /* Workspace (BEM) */
 .workspace__container { @apply container mx-auto px-6 py-6; }
-.workspace__head { @apply flex items-center justify-between mb-4; }
-.workspace__head h1 { @apply m-0 mb-1; }
 .workspace__meta { @apply inline-flex gap-2 items-center; }
 .workspace__muted { @apply text-muted text-sm; }
 .workspace__badge { @apply inline-block text-xs px-2 py-0.5 rounded-md border border-border bg-surface text-text; }

@@ -16,6 +16,12 @@ module.exports = {
         border: 'rgba(243, 244, 246, 0.12)',
         surface: 'rgba(255, 255, 255, 0.04)',
         muted: 'rgba(243, 244, 246, 0.7)',
+        card: "#1b2330",
+        'card-foreground': "#f3f4f6",
+        success: '#21c45d'
+      },
+      boxShadow: {
+        'glow': '0 0 20px rgba(35, 154, 143, 0.4), 0 0 40px rgba(35, 154, 143, 0.2)',
       },
       container: {
         center: true,

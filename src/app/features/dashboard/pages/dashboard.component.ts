@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { HeaderComponent } from '../../components/header/header.component';
+import { Router } from '@angular/router';
 
 interface Project {
   id: string;
@@ -14,12 +13,13 @@ interface Project {
 
 @Component({
   selector: 'app-dashboard',
-  standalone: true,
-  imports: [RouterLink, HeaderComponent],
+  standalone: false,
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
+  constructor(private router: Router) {}
+
   viewMode: 'grid' | 'list' = 'grid';
 
   projects: Project[] = [
@@ -28,4 +28,12 @@ export class DashboardComponent {
     { id: '3', title: 'Algebra Basics', subject: 'Mathematics', status: 'draft', questionCount: 0, lastUpdated: '1 day ago', createdAt: '2025-01-09' },
     { id: '4', title: 'French Revolution', subject: 'History', status: 'ready', questionCount: 20, lastUpdated: '2 days ago', createdAt: '2025-01-08' },
   ];
+
+  navigateToNewQuiz(): void {
+    this.router.navigate(['/new']);
+  }
+
+  navigateToQuizDetails(quizId: string | undefined): void {
+    this.router.navigate(['/project', quizId]);
+  }
 }

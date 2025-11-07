@@ -31,3 +31,15 @@ body {
 h1 {
   @apply text-4xl font-bold;
 }
+
+.shadow-glow {
+  box-shadow: 0 0 24px hsl(199 89% 48% / 0.3);
+}
+
+.hero-button {
+  @apply py-3 px-8 rounded-xl bg-primary flex items-center justify-center hover:shadow-glow transition;
+}
+
+.gradient-card {
+  background: linear-gradient(180deg, hsl(217 28% 16%), hsl(217 28% 14%));
+}
