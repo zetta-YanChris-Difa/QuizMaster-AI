@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslocoService } from '@jsverse/transloco';
+import { SwalService } from '../../../core/services/swal.service';
 
 interface Project {
   id: string;
@@ -18,7 +20,11 @@ interface Project {
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private swalService: SwalService,
+    private transloco: TranslocoService
+  ) {}
 
   viewMode: 'grid' | 'list' = 'grid';
 
@@ -35,5 +41,30 @@ export class DashboardComponent {
 
   navigateToQuizDetails(quizId: string | undefined): void {
     this.router.navigate(['/project', quizId]);
+  }
+
+  async deleteProject(event: Event, projectId: string): Promise<void> {
+    event.stopPropagation(); // Prevent card click navigation
+
+    const confirmed = await this.swalService.confirm({
+      title: this.transloco.translate('dashboard.quizMasterS1.title'),
+      text: this.transloco.translate('dashboard.quizMasterS1.text'),
+      icon: 'warning',
+      confirmButtonText: this.transloco.translate('dashboard.quizMasterS1.confirmButton'),
+      cancelButtonText: this.transloco.translate('dashboard.quizMasterS1.cancelButton'),
+      timer: 5000, // 5 seconds
+      type: 'swal',
+      footer: `<span class="tw-ml-auto">ACAD_KIT_S01</span>`,
+    });
+
+    if (confirmed) {
+      // Remove project from array
+      this.projects = this.projects.filter(p => p.id !== projectId);
+      
+      // Show success message
+      this.swalService.success(
+        this.transloco.translate('dashboard.deleteSuccess')
+      );
+    }
   }
 }

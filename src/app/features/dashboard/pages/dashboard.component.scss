@@ -13,10 +13,12 @@
 .dashboard__projects { @apply grid grid-cols-3 gap-6; }
 .dashboard__projects.list { @apply block; }
 .dashboard__card { @apply cursor-pointer p-8 rounded-lg bg-card text-card-foreground shadow-sm border border-border/5 hover:border-primary/50 transition hover:shadow-md; }
-.dashboard__card h3 { @apply m-0 mb-1 text-lg; }
+.dashboard__card-header-row { @apply flex items-start justify-between gap-2 mb-1; }
+.dashboard__card h3 { @apply m-0 text-lg flex-1; }
 .dashboard__card span { @apply inline-block mt-4 pb-2 }
 .dashboard__muted { @apply text-muted text-sm; }
 .dashboard__status { @apply inline-block mt-2 text-xs px-2 pt-1 rounded-md border border-border; }
 .dashboard__status[data-status="ready"] { @apply bg-success/15 text-text border-border; }
 .dashboard__status[data-status="processing"] { @apply bg-primary/15 text-text border-border; }
 .dashboard__status[data-status="draft"] { @apply bg-yellow-500/15 text-text border-border; }
+.dashboard__delete-btn { @apply p-1.5 rounded-md border-0 bg-transparent text-red-500 hover:bg-red-500/10 transition cursor-pointer flex items-center justify-center; }

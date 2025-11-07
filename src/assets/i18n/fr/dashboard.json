@@ -16,5 +16,13 @@
     "ready": "prêt",
     "processing": "en cours de traitement",
     "draft": "brouillon"
-  }
+  },
+  "delete": "Supprimer",
+  "quizMasterS1": {
+    "title": "Supprimer le projet?",
+    "text": "Cette action est irréversible. Le projet sera définitivement supprimé.",
+    "confirmButton": "Annuler",
+    "cancelButton": "Annuler"
+  },
+  "deleteSuccess": "Projet supprimé avec succès"
 }

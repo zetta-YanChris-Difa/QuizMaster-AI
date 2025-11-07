@@ -16,5 +16,13 @@
     "ready": "Ready",
     "processing": "Processing",
     "draft": "Draft"
-  }
+  },
+  "delete": "Delete",
+  "quizMasterS1": {
+    "title": "Delete Project?",
+    "text": "This action cannot be undone. The project will be permanently deleted.",
+    "confirmButton": "Yes, delete it",
+    "cancelButton": "Cancel"
+  },
+  "deleteSuccess": "Project deleted successfully"
 }

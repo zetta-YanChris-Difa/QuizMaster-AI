@@ -28,7 +28,18 @@
       @if (projects.length) {
         @for (p of projects; track p.id) {
           <div class="dashboard__card gradient-card" (click)="navigateToQuizDetails(p?.id)">
-            <h3>{{ p.title }}</h3>
+            <div class="dashboard__card-header-row">
+              <h3>{{ p.title }}</h3>
+              <button 
+                class="dashboard__delete-btn" 
+                (click)="deleteProject($event, p.id)"
+                [matTooltip]="'dashboard.delete' | transloco"
+                matTooltipPosition="above"
+                type="button"
+                aria-label="Delete project">
+                <mat-icon svgIcon="trash" class="!h-4 !w-4"></mat-icon>
+              </button>
+            </div>
             <p class="dashboard__muted">{{ p.questionCount }} {{ 'questions' | transloco }}</p>
             <span class="dashboard__status" [attr.data-status]="p.status">{{ 'dashboard.quizStatus.' + p.status | transloco}}</span>
           </div>

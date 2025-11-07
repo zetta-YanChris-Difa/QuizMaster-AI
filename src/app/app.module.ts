@@ -53,5 +53,9 @@ export class AppModule {
       'search',
       this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons-packs/custom-icons/search.svg')
     );
+    this.matIconRegistry.addSvgIcon(
+      'trash',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons-packs/custom-icons/trash.svg')
+    );
   }
 }

@@ -7,6 +7,7 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { DashboardComponent } from './pages/dashboard.component';
 import { RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
     HeaderComponent,
     RouterLink,
     MatIconModule,
+    MatTooltipModule,
     TranslocoModule,
   ],
   providers: [
