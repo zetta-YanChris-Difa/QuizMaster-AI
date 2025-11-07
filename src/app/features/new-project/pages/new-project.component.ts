@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../components/header/header.component';
-import { Router, RouterLink } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-project',
-  standalone: true,
-  imports: [HeaderComponent, RouterLink, FormsModule],
+  standalone: false,
   templateUrl: './new-project.component.html',
   styleUrls: ['./new-project.component.scss']
 })

@@ -9,7 +9,6 @@ import { provideTransloco } from '@jsverse/transloco';
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 import { IndexComponent } from './pages/index/index.component';
-import { NewProjectComponent } from './pages/new-project/new-project.component';
 import { ProjectWorkspaceComponent } from './pages/project-workspace/project-workspace.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { TranslocoHttpLoader } from './transloco-loader';
@@ -24,7 +23,6 @@ import { TranslocoHttpLoader } from './transloco-loader';
     MatIconModule,
     RouterModule.forRoot(routes),
     IndexComponent,
-    NewProjectComponent,
     ProjectWorkspaceComponent,
     NotFoundComponent,
   ],

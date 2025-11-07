@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { IndexComponent } from './pages/index/index.component';
-import { NewProjectComponent } from './pages/new-project/new-project.component';
 import { ProjectWorkspaceComponent } from './pages/project-workspace/project-workspace.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
@@ -11,7 +10,10 @@ export const routes: Routes = [
     path: 'dashboard',
     loadChildren: () => import('./features/dashboard/dashboard.module').then(m => m.DashboardModule),
   },
-  { path: 'new', component: NewProjectComponent },
+  {
+    path: 'new',
+    loadChildren: () => import('./features/new-project/new-project.module').then(m => m.NewProjectModule),
+  },
   { path: 'project/:id', component: ProjectWorkspaceComponent },
   { path: '**', component: NotFoundComponent },
 ];

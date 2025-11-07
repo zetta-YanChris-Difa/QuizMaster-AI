@@ -6,6 +6,7 @@
 .dashboard__hero-text p { @apply m-0 text-muted text-lg; }
 .dashboard__toolbar { @apply flex gap-4 items-center mb-12; width: 34rem }
 .dashboard__toolbar input { @apply flex-1 px-3.5 py-2.5 border border-border rounded-md bg-card text-text w-12; }
+.dashboard__toolbar button { @apply rounded-full p-3; }
 // .dashboard__view-toggle { @apply flex gap-1 border border-border rounded-md p-1; }
 // .dashboard__view-toggle button { @apply border-0 bg-transparent px-2.5 py-1.5 rounded text-text; }
 // .dashboard__view-toggle button.active { @apply bg-surface; }

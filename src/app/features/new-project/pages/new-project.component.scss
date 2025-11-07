@@ -1,0 +1,19 @@
+/* New Project (BEM) */
+.new-project__container { @apply container mx-auto max-w-[720px] px-6 py-8; }
+.new-project__intro h1 { @apply m-0 mb-2; }
+.new-project__intro p { @apply m-0 text-muted text-lg; }
+.new-project__card { @apply border border-border rounded-lg bg-card shadow-sm; }
+.new-project__card-header { @apply px-5 py-4 border-b border-border; }
+.new-project__card-header h2 { @apply m-0 mb-1 text-lg; }
+.new-project__card-header p { @apply m-0 text-muted text-sm; }
+.new-project__card-content { @apply p-5 grid gap-4; }
+.new-project__field { @apply grid gap-1.5; }
+.new-project__field input, .new-project__field select { @apply px-3.5 py-2.5 border border-border rounded-md bg-card text-text; }
+.new-project__section { @apply border-t border-border pt-4 grid gap-3; }
+.new-project__section h3 { @apply m-0 mb-1 text-base; }
+.new-project__row { @apply flex justify-between items-center; }
+.new-project__row--gap { @apply gap-2; }
+.new-project__row--end { @apply justify-end; }
+.new-project__chips { @apply flex gap-2 flex-wrap; }
+.new-project__chip { @apply px-3 py-1.5 border border-border rounded-full bg-transparent text-text cursor-pointer hover:bg-surface transition; }
+.new-project__chip--active { @apply bg-primary/15 border-primary/50; }
