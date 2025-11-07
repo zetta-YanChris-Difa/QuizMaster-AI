@@ -1,0 +1,27 @@
+{
+  "title": "Create New Quiz",
+  "subtitle": "Build your AI-powered quiz in minutes",
+  "steps": {
+    "upload": "Upload Content",
+    "configure": "Configure Quiz",
+    "generate": "Generate Questions",
+    "review": "Review & Export"
+  },
+  "form": {
+    "projectName": "Project Name",
+    "subject": "Subject",
+    "difficulty": "Difficulty Level",
+    "questionCount": "Number of Questions",
+    "uploadFile": "Upload File"
+  },
+  "actions": {
+    "startGeneration": "Start Generation",
+    "addFile": "Add File",
+    "removeFile": "Remove File"
+  },
+  "messages": {
+    "uploadSuccess": "File uploaded successfully",
+    "generationStarted": "Quiz generation started",
+    "processingFile": "Processing your file..."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "header": {
+    "title": "QuizMaster AI",
+    "subtitle": "Créateur de Quiz Intelligent"
+  },
+  "actions": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "create": "Créer",
+    "back": "Retour",
+    "next": "Suivant",
+    "submit": "Soumettre"
+  },
+  "messages": {
+    "loading": "Chargement...",
+    "success": "Succès !",
+    "error": "Une erreur s'est produite",
+    "noData": "Aucune donnée disponible"
+  }
+}

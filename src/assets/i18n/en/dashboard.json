@@ -1,0 +1,14 @@
+{
+  "title": "Dashboard",
+  "welcome": "Create, manage, and export AI-powered quizzes",
+  "myProjects": "Your Quiz Projects",
+  "recentActivity": "Recent Activity",
+  "statistics": {
+    "totalProjects": "Total Projects",
+    "totalQuizzes": "Total Quizzes",
+    "totalQuestions": "Total Questions"
+  },
+  "createNew": "Create New Project",
+  "noProjects": "You don't have any projects yet",
+  "getStarted": "Get started by creating your first quiz project"
+}

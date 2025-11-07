@@ -4,14 +4,17 @@
   <main class="dashboard__container">
     <section class="dashboard__hero">
       <div class="dashboard__hero-text">
-        <h1>Your Quiz Projects</h1>
-        <p>Create, manage, and export AI-powered quizzes</p>
+        <h1>{{ 'dashboard.myProjects' | transloco }}</h1>
+        <p>{{ 'dashboard.welcome' | transloco }}</p>
       </div>
-      <button mat-button class="hero-button" (click)="navigateToNewQuiz()"><mat-icon class="!h-4" svgIcon="sparkles"></mat-icon>Create New Quiz</button>
+      <button mat-button class="hero-button" (click)="navigateToNewQuiz()">
+        <mat-icon class="!h-4" svgIcon="sparkles"></mat-icon>
+        {{ 'dashboard.createNew' | transloco }}
+      </button>
     </section>
 
     <section class="dashboard__toolbar">
-      <input type="text" placeholder="Search projects..." />
+      <input type="text" [placeholder]="'messages.loading' | transloco" />
       <button mat-button matSuffix class="hero-button">
         <mat-icon svgIcon="search"></mat-icon>
       </button>
@@ -35,9 +38,9 @@
 
     <ng-template #empty>
       <div class="dashboard__empty">
-        <h2>No projects yet</h2>
-        <p class="muted">Create your first quiz project to get started</p>
-        <a routerLink="/new" class="btn btn-accent">Create Your First Quiz</a>
+        <h2>{{ 'dashboard.noProjects' | transloco }}</h2>
+        <p class="muted">{{ 'dashboard.getStarted' | transloco }}</p>
+        <a routerLink="/new" class="btn btn-accent">{{ 'dashboard.createNew' | transloco }}</a>
       </div>
     </ng-template>
   </main>

@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { provideTransloco } from '@jsverse/transloco';
 
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
@@ -11,6 +12,7 @@ import { IndexComponent } from './pages/index/index.component';
 import { NewProjectComponent } from './pages/new-project/new-project.component';
 import { ProjectWorkspaceComponent } from './pages/project-workspace/project-workspace.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { TranslocoHttpLoader } from './transloco-loader';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,17 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     ProjectWorkspaceComponent,
     NotFoundComponent,
   ],
-  providers: [],
+  providers: [
+    provideTransloco({
+      config: {
+        availableLangs: ['en', 'fr'],
+        defaultLang: 'en',
+        reRenderOnLangChange: true,
+        prodMode: !isDevMode(),
+      },
+      loader: TranslocoHttpLoader
+    }),
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

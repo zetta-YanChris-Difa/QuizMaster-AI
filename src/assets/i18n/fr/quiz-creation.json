@@ -1,0 +1,27 @@
+{
+  "title": "Créer un Nouveau Quiz",
+  "subtitle": "Construisez votre quiz alimenté par l'IA en quelques minutes",
+  "steps": {
+    "upload": "Télécharger le Contenu",
+    "configure": "Configurer le Quiz",
+    "generate": "Générer des Questions",
+    "review": "Réviser et Exporter"
+  },
+  "form": {
+    "projectName": "Nom du Projet",
+    "subject": "Matière",
+    "difficulty": "Niveau de Difficulté",
+    "questionCount": "Nombre de Questions",
+    "uploadFile": "Télécharger un Fichier"
+  },
+  "actions": {
+    "startGeneration": "Démarrer la Génération",
+    "addFile": "Ajouter un Fichier",
+    "removeFile": "Supprimer le Fichier"
+  },
+  "messages": {
+    "uploadSuccess": "Fichier téléchargé avec succès",
+    "generationStarted": "Génération du quiz commencée",
+    "processingFile": "Traitement de votre fichier..."
+  }
+}

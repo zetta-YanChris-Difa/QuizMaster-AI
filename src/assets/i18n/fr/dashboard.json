@@ -1,0 +1,14 @@
+{
+  "title": "Tableau de bord",
+  "welcome": "Créez, gérez et exportez des quiz propulsés par l’IA",
+  "myProjects": "Vos projets de quiz",
+  "recentActivity": "Activité Récente",
+  "statistics": {
+    "totalProjects": "Projets Totaux",
+    "totalQuizzes": "Quiz Totaux",
+    "totalQuestions": "Questions Totales"
+  },
+  "createNew": "Créer un Nouveau Projet",
+  "noProjects": "Vous n'avez pas encore de projets",
+  "getStarted": "Commencez par créer votre premier projet de quiz"
+}

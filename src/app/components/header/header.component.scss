@@ -4,5 +4,16 @@
 .header__brand { @apply flex items-center gap-3 no-underline text-text; }
 .header__brand-text h1 { @apply m-0 text-lg font-bold; }
 .header__brand-text p { @apply m-0 text-xs text-muted; }
+.header__actions { @apply flex items-center gap-3; }
 .header__actions .btn { @apply px-3 py-2 rounded-md border border-border; }
 .header__brand-icon { @apply p-2 pb-1 rounded-lg; }
+
+/* Language Switcher */
+.language-switcher { @apply flex items-center gap-2 p-1 pt-0 rounded-lg bg-background border border-border; }
+.language-btn {
+  @apply px-2 pt-0 pb-1 text-xl bg-transparent border-none cursor-pointer rounded transition-all opacity-50 hover:opacity-75;
+
+  &.active {
+    @apply opacity-100 scale-110;
+  }
+}

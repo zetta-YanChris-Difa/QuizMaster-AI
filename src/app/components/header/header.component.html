@@ -5,9 +5,30 @@
         <mat-icon svgIcon="sparkles"></mat-icon>
       </div>
       <div class="header__brand-text">
-        <h1>QuizMaster AI</h1>
-        <p>Smart Quiz Builder</p>
+        <h1>{{ 'header.title' | transloco }}</h1>
+        <p>{{ 'header.subtitle' | transloco }}</p>
       </div>
     </a>
+    
+    <div class="header__actions">
+      <div class="language-switcher">
+        <button 
+          class="language-btn" 
+          [class.active]="currentLang === 'en'"
+          (click)="switchLanguage('en')"
+          title="English"
+          type="button">
+          🇪🇳
+        </button>
+        <button 
+          class="language-btn" 
+          [class.active]="currentLang === 'fr'"
+          (click)="switchLanguage('fr')"
+          title="Français"
+          type="button">
+          🇫🇷
+        </button>
+      </div>
+    </div>
   </div>
 </header>
