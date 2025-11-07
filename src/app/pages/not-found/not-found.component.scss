@@ -1,0 +1,4 @@
+/* Not Found (BEM) */
+.not-found { @apply min-h-screen grid place-items-center bg-gray-100; }
+.not-found__card { @apply text-center px-10 py-8 bg-white border border-gray-200 rounded-xl; }
+.not-found__link { @apply text-blue-600 underline; }

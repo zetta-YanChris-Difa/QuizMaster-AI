@@ -1,0 +1,6 @@
+/* Index (BEM) */
+.index { @apply min-h-screen; }
+.index__hero { @apply grid place-items-center min-h-[calc(100vh-64px)]; }
+.index__center { @apply text-center; }
+.index__center h1 { @apply mb-3; }
+.index__center p { @apply text-muted text-lg; }

@@ -1,0 +1,84 @@
+<div class="workspace">
+  <app-header></app-header>
+
+  <main class="workspace__container">
+    <section class="workspace__head">
+      <div>
+        <h1>Chapter 4: Photosynthesis</h1>
+        <div class="workspace__meta">
+          <span class="workspace__badge workspace__badge--success">Ready</span>
+          <span class="workspace__muted">Biology</span>
+          <span class="workspace__muted">•</span>
+          <span class="workspace__muted">15 questions</span>
+        </div>
+      </div>
+      <div class="workspace__row workspace__row--gap">
+        <button class="btn">Settings</button>
+        <button class="btn btn-accent">Export</button>
+      </div>
+    </section>
+
+    <div class="workspace__grid">
+      <aside>
+        <section class="workspace__card">
+          <header class="workspace__card-header"><h3>Source Materials</h3></header>
+          <div class="workspace__card-content">
+            @for (f of files; track f.name) {
+              <div class="workspace__file">
+                <div class="workspace__file-icon">📄</div>
+                <div class="workspace__file-meta">
+                  <p class="workspace__file-name">{{ f.name }}</p>
+                  <p class="workspace__muted">{{ f.pages }} pages</p>
+                </div>
+              </div>
+            }
+            <button class="btn workspace__w-full" type="button">Add Files</button>
+          </div>
+        </section>
+
+        <section class="workspace__card">
+          <header class="workspace__card-header"><h3>Quick Actions</h3></header>
+          <div class="workspace__card-content">
+            <button class="btn workspace__w-full" type="button">Generate More</button>
+            <button class="btn workspace__w-full" type="button">Regenerate All</button>
+          </div>
+        </section>
+      </aside>
+
+      <section>
+        <section class="workspace__card">
+          <header class="workspace__card-header workspace__row workspace__row--between">
+            <h3>Generated Questions</h3>
+            <button class="btn" type="button">Generate More</button>
+          </header>
+          <div class="workspace__card-content">
+            <div class="workspace__table">
+              <div class="thead">
+                <div class="tr">
+                  <div class="workspace__th w-24">Type</div>
+                  <div class="workspace__th">Question</div>
+                  <div class="workspace__th w-28">Difficulty</div>
+                  <div class="workspace__th w-20 workspace__right">Actions</div>
+                </div>
+              </div>
+              <div class="tbody">
+                @for (q of questions; track q.id) {
+                  <div class="tr">
+                    <div class="workspace__td"><span class="badge">{{ q.type }}</span></div>
+                    <div class="workspace__td workspace__strong">{{ q.stem }}</div>
+                    <div class="workspace__td">
+                      <span class="badge" [attr.data-diff]="q.difficulty">{{ q.difficulty }}</span>
+                    </div>
+                    <div class="workspace__td workspace__right">
+                      <button class="btn btn-ghost" type="button">•••</button>
+                    </div>
+                  </div>
+                }
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+  </main>
+</div>

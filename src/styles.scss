@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+}
+body {
+  @apply bg-background text-text;
+}
+
+/***** Global utility classes implemented via Tailwind *****/
+/* Use Tailwind's built-in .container for width + centering (see tailwind.config.js) */
+.muted { @apply text-muted; }
+
+.btn {
+  @apply inline-flex items-center justify-center px-3.5 py-2.5 rounded-md border border-border no-underline bg-transparent text-text;
+}
+.btn-ghost { @apply bg-transparent border-transparent; }
+.btn-secondary { @apply bg-surface; }
+.btn-accent { @apply bg-primary text-[#E8EFF1] border-transparent shadow-sm; }
+
+.card { @apply bg-surface border border-border rounded-xl; }
+.badge { @apply bg-surface border border-border text-text inline-block text-sm px-2 py-0.5 rounded-md; }
+
+h1 {
+  @apply text-4xl font-bold;
+}

@@ -1,0 +1,77 @@
+<div class="new-project">
+  <app-header></app-header>
+
+  <main class="new-project__container">
+    <a routerLink="/" class="btn btn-ghost">← Back to Dashboard</a>
+
+    <section class="new-project__intro">
+      <h1>Create New Quiz Project</h1>
+      <p class="muted">Set up your quiz parameters and we'll help you generate questions</p>
+    </section>
+
+    <section class="new-project__card">
+      <header class="new-project__card-header">
+        <h2>Project Configuration</h2>
+        <p class="muted">Fill in the details below to create your quiz project</p>
+      </header>
+      <div class="new-project__card-content">
+        <label class="new-project__field">
+          <span>Project Title *</span>
+          <input placeholder="e.g., Chapter 4: Photosynthesis" />
+        </label>
+
+        <label class="new-project__field">
+          <span>Subject *</span>
+          <select [(ngModel)]="subject">
+            <option value="" disabled selected>Select a subject</option>
+            <option value="biology">Biology</option>
+            <option value="chemistry">Chemistry</option>
+            <option value="physics">Physics</option>
+            <option value="mathematics">Mathematics</option>
+            <option value="history">History</option>
+            <option value="geography">Geography</option>
+            <option value="literature">Literature</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+
+        <label class="new-project__field">
+          <span>Language</span>
+          <select [(ngModel)]="language">
+            <option value="english">English</option>
+            <option value="french">French</option>
+          </select>
+        </label>
+
+        <div class="new-project__section">
+          <h3>Quiz Settings</h3>
+
+          <label class="new-project__field">
+            <div class="new-project__row">
+              <span>Number of Questions</span>
+              <strong class="text-primary">{{ questionCount }}</strong>
+            </div>
+            <input type="range" min="5" max="50" step="5" [(ngModel)]="questionCount" />
+          </label>
+
+          <div class="new-project__chips">
+            <button class="new-project__chip new-project__chip--active" type="button">Multiple Choice</button>
+            <button class="new-project__chip" type="button">Short Answer</button>
+            <button class="new-project__chip" type="button">Comprehension</button>
+          </div>
+
+          <div class="new-project__row new-project__row--gap">
+            <button class="btn" type="button">Easy (30%)</button>
+            <button class="btn btn-secondary" type="button">Medium (50%)</button>
+            <button class="btn" type="button">Hard (20%)</button>
+          </div>
+        </div>
+
+        <div class="new-project__row new-project__row--gap new-project__row--end">
+          <a routerLink="/" class="btn">Cancel</a>
+          <button class="btn btn-accent" type="button" (click)="create()">Create Project</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

@@ -1,0 +1,41 @@
+<div class="dashboard">
+  <app-header></app-header>
+
+  <main class="dashboard__container">
+    <section class="dashboard__hero">
+      <div class="dashboard__hero-text">
+        <h1>Your Quiz Projects</h1>
+        <p>Create, manage, and export AI-powered quizzes</p>
+      </div>
+      <a routerLink="/new" class="btn btn-accent">Create New Quiz</a>
+    </section>
+
+    <section class="dashboard__toolbar">
+      <input type="text" placeholder="Search projects..." />
+      <!-- <div class="dashboard__view-toggle">
+        <button (click)="viewMode='grid'" [class.active]="viewMode==='grid'">Grid</button>
+        <button (click)="viewMode='list'" [class.active]="viewMode==='list'">List</button>
+      </div> -->
+    </section>
+
+    <section class="dashboard__projects" [class.list]="viewMode === 'list'">
+      @if (projects.length) {
+        @for (p of projects; track p.id) {
+          <a class="dashboard__card" [routerLink]="['/project', p.id]">
+            <h3>{{ p.title }}</h3>
+            <p class="dashboard__muted">{{ p.subject }} • {{ p.questionCount }} questions</p>
+            <span class="dashboard__status" [attr.data-status]="p.status">{{ p.status }}</span>
+          </a>
+        }
+      }
+    </section>
+
+    <ng-template #empty>
+      <div class="dashboard__empty">
+        <h2>No projects yet</h2>
+        <p class="muted">Create your first quiz project to get started</p>
+        <a routerLink="/new" class="btn btn-accent">Create Your First Quiz</a>
+      </div>
+    </ng-template>
+  </main>
+</div>

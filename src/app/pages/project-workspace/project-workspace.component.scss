@@ -1,0 +1,27 @@
+/* Workspace (BEM) */
+.workspace__container { @apply container mx-auto px-6 py-6; }
+.workspace__head { @apply flex items-center justify-between mb-4; }
+.workspace__head h1 { @apply m-0 mb-1; }
+.workspace__meta { @apply inline-flex gap-2 items-center; }
+.workspace__muted { @apply text-muted text-sm; }
+.workspace__badge { @apply inline-block text-xs px-2 py-0.5 rounded-md border border-border bg-surface text-text; }
+.workspace__badge--success { @apply bg-accent/15 text-text border-border; }
+
+.workspace__grid { @apply grid gap-4 items-start; grid-template-columns: 1fr 3fr; }
+.workspace__card { @apply border border-border rounded-xl bg-surface; }
+.workspace__card-header { @apply py-3.5 px-4 border-b border-border; }
+.workspace__card-content { @apply p-4 grid gap-2; }
+.workspace__file { @apply flex gap-2 border border-border rounded-md px-2.5 py-2; }
+.workspace__file-icon { font-size: 1rem; }
+.workspace__file-name { @apply m-0 text-base; }
+
+.workspace__table .tr { display: grid; grid-template-columns: 6rem 1fr 7rem 5rem; align-items: center; }
+.workspace__table .thead .tr { @apply font-semibold; background-color: rgb(243 244 246 / 0.05); }
+.workspace__th, .workspace__td { @apply px-3 py-2.5 border-b border-border; }
+.workspace__strong { @apply font-semibold; }
+.workspace__right { @apply text-right; }
+
+.workspace__row { @apply flex items-center; }
+.workspace__row--gap { @apply gap-2; }
+.workspace__row--between { @apply justify-between; }
+.workspace__w-full { @apply w-full; }
